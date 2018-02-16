@@ -1,0 +1,87 @@
+.jumbotron {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+	height: 320px;
+    color: inherit;
+    background-color: skyblue;
+	border: 3px solid black;
+}
+
+.logo {
+    padding-bottom: 40px;
+    margin-bottom: 45px;
+}
+
+.simpsonsFamily {
+    margin-left: 50px;
+	padding-left: 20px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+body{
+	background-image: url("../images/background.jpg");
+	height: 100%; 
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+
+.container{
+	margin-top: 10px;
+
+}
+.character-img{
+	width:160px;
+	height:190px;
+	border-radius: 40px;
+}
+.character-box{
+	
+	padding:0px 10px 0px 10px;
+	background-color: white;
+	border-radius: 40px;
+	border: 5px solid black;
+	text-align: center;
+	color:black;
+	display:inline-block;
+	border-top:10px;
+}
+
+#messageCharacters {
+	color:white;
+	font-size: 20px;
+	text-align: center;
+}
+
+.character-box:hover{
+	opacity:0.8;
+}
+
+#characters{
+	height:200px;
+}
+
+#attacker, #defender, #restart, #attack, #defender{
+	display: inline-block;
+}
+
+#btnAttack,#btnRestart{
+	vertical-align: middle;
+	color: black;
+}
+
+.fighter-arena{
+	height:350px;
+	text-align: center;
+	background: transparent;
+	color: white;
+	text-align:center;
+	font-size: 15px;
+	margin-top:60px;
+
+}
+
