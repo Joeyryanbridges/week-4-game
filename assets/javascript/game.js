@@ -58,9 +58,8 @@ function initializeGame(){
 	// toggle the attackRestart button to Attack
 	$('#btnAttackRestart').html("Attack");
 	$("#btnAttackRestart").hide();
-	$('#message').html("Created by Joey R. Bridges");
 	$('#messageFooter').html("");
-	$('#messageCharacters').html("Cowabunga! Choose your character to fight!")
+	$('#messageCharacters').html("Welcome to The Simpson's Zombie Edition!<br>Choose your Zombie & fight!"	)
 
 	// showing the basepower and name as captions to the picture of character
 	for(var i=0;i<characters.length;i++){
@@ -81,8 +80,6 @@ function pickAttackerAndEnemies(){
 		$('#attacker').prepend($(this));
 		attackerScore=characters[attacker].basePower;
 		attackerPower = characters[attacker].attackPower;
-		$('#message').html("Pick enemy to fight from remaining characters.");	
-		$('#messageCharacters').html("Available enemies");
 
 	}
 	// after the attacker is set, for the next click it sets the defender
@@ -94,9 +91,8 @@ function pickAttackerAndEnemies(){
 		$('#characters').children().prop("disabled",true);
 		$('#btnAttackRestart').show();
 		$('#btnAttackRestart').attr("disabled",false);
-		$('#message').html("ATTACK!");
 		if($('#characters').children().length ===0){
-			$('#messageCharacters').html("No more enemies left.");
+			$('#messageCharacters').html("No more zombies left.");
 		}
 
 	}
@@ -143,26 +139,26 @@ function result(){
 	
 	if(attackerScore===0 && defenderScore===0){
 		console.log("here 1");
-	 	$('#message').html("<span>"+"It's a tie. Game over...!"+"</span>"+"<br>");
+	 	$('#message').html("<span>"+"It's a tie, what the hell?! Game over...!"+"</span>"+"<br>");
 	 	beforeRestart();	
 	 	return;
 	}else if (attackerScore <= 0 && defenderScore>0){
 		console.log("here 2");
-		$('#message').html("<span>"+"You got defeated by "+characters[defender].name+". Game over...!"+"</span>"+"<br>");
+		$('#message').html("<span>"+"You were zombified "+characters[defender].name+". Game over dude...!"+"</span>"+"<br>");
 	 	beforeRestart();
 	 	return;
 
 	}else if(attackerScore<0 && defenderScore<0){
 		console.log("here 3");
-		$('#messageFooter').prepend("<span>"+"You loose. Game over...!"+"</span>"+"<br>");
+		$('#messageFooter').prepend("<span>"+"You loose. Game over dude...!"+"</span>"+"<br>");
 	 	beforeRestart();
 	 	return;
 	}else if(attackerScore>0 &&  defenderScore<=0){
 		console.log("here 4");		
-		$('#messageFooter').prepend("<span>"+"You defeated "+characters[defender].name+"</span>"+"<br>");
+		$('#messageFooter').prepend("<span>"+"You crushed "+characters[defender].name+"</span>"+"<br>");
 		
 		if($('#characters').children().length ===0){
-			$('#messageFooter').prepend("<span>"+"You defeated all the enemeis. Yeh!"+"</span>"+"<br>");
+			$('#messageFooter').prepend("<span>"+"You defeated all zombies!. Radical! "+"</span>"+"<br>");
 			$('#messageCharacters').html("CONGRATULATIONS..!!!!");	
 			beforeRestart();
 	 	}else{
@@ -186,7 +182,7 @@ function beforeRestart(){
 	
 	$('#btnAttackRestart').attr("disabled",false);
 	$('#btnAttackRestart').html("Restart");
-	$('#message').html("Press restart to play again");
+	$('#message').html("Play again? Press restart to play you dingus!");
 }
 
 
