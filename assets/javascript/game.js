@@ -1,8 +1,9 @@
 	$(document).ready(function(){
-    $('.container').slideDown(4500);
+    $('.container').slideDown(6000);
 	$(".logo").hide();
-    $(".logo").fadeIn(7000);
-});
+    $(".logo").fadeIn(15000);
+});		
+		
 
 // declare global varaibles
 
@@ -154,7 +155,7 @@ function result(){
 
 	}else if(attackerScore<0 && defenderScore<0){
 		console.log("here 3");
-		$('#messageFooter').prepend("<span>"+"You loose. Game over dude...!"+"</span>"+"<br>");
+		$('#messageFooter').prepend("<span>"+"You lose. Game over dude...!"+"</span>"+"<br>");
 	 	beforeRestart();
 	 	return;
 	}else if(attackerScore>0 &&  defenderScore<=0){
