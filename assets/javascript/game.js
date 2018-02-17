@@ -1,4 +1,8 @@
-
+	$(document).ready(function(){
+    $('.container').slideDown(4500);
+	$(".logo").hide();
+    $(".logo").fadeIn(7000);
+});
 
 // declare global varaibles
 
